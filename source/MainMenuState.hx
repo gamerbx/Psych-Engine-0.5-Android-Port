@@ -94,7 +94,8 @@ class MainMenuState extends MusicBeatState
 		magenta.color = 0xFFfd719b;
 		add(magenta);
 		// magenta.scrollFactor.set();
-
+        // menuItem.screenCenter(X);
+        menuItem.x += 250;
 		menuItems = new FlxTypedGroup<FlxSprite>();
 		add(menuItems);
 
@@ -241,7 +242,7 @@ class MainMenuState extends MusicBeatState
 									#if MODS_ALLOWED
 									case 'mods':
 										MusicBeatState.switchState(new ModsMenuState());
-									#end
+								 #end
 									case 'awards':
 										MusicBeatState.switchState(new AchievementsMenuState());
 									case 'credits':
@@ -265,7 +266,7 @@ class MainMenuState extends MusicBeatState
 
 		menuItems.forEach(function(spr:FlxSprite)
 		{
-			spr.screenCenter(X);
+			// spr.screenCenter(X);
 		});
 	}
 
